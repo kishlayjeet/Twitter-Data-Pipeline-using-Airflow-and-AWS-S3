@@ -1,6 +1,6 @@
 # Twitter Data Pipeline using Airflow and AWS S3
 
-TThis project is designed to extract data from Twitter using the Twitter API and load it into an AWS S3 bucket in CSV format. The pipeline is managed and orchestrated using Airflow.
+This project is designed to extract data from Twitter using the Twitter API and load it into an AWS S3 bucket in CSV format. The pipeline is managed and orchestrated using Airflow.
 
 ## Architecture
 

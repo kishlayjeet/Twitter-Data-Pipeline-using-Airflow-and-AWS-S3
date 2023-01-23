@@ -20,7 +20,7 @@ I used a local machine with the below specifications:
 
 ```bash
   UbuntuOs
-  2 vCore, 8 GiB Memory
+  4 vCore, 4 GiB Memory
   Storage: 32 GiB
 ```
 
@@ -39,7 +39,7 @@ I used a local machine with the below specifications:
 1. Clone the repository
 
 ```bash
- git clone https://github.com/kishlayjeet/twitter-data-pipeline
+ git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-using-Airflow-and-AWS-S3.git
 
 ```
 

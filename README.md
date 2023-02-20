@@ -114,10 +114,16 @@ Example:-
 
 ## Conclusion
 
-This project demonstrates how to build a data pipeline using Airflow to extract data from the Twitter API, process it using pandas, and load it into an AWS S3 bucket in CSV format. By following the instructions in this README, you should be able to set up and run the pipeline successfully. However, in case of any issues, the troubleshooting tips provided should help you resolve them.
+In conclusion, this project provides a detailed guide on how to build a data pipeline using Airflow to extract data from the Twitter API, process it using pandas, and load it into an AWS S3 bucket in CSV format. By following the step-by-step instructions in this README, you should be able to set up and run the pipeline successfully.
 
-It is important to note that this project is intended for educational or testing purposes. Before using the data in production, make sure to comply with Twitter's terms of service and any other relevant laws and regulations. It is also important to consider data privacy, security, and compliance in any production implementation.
+## Important Considerations
 
-Additionally, this project can be further enhanced by adding more functionalities such as data cleaning, transformation, and analysis. It can also be integrated with other systems and services, such as data warehousing, machine learning, and visualization tools, to enable more advanced use cases.
+It is important to note that this project is intended for educational or testing purposes. Before using the data in production, it is crucial to comply with Twitter's terms of service and any other relevant laws and regulations. It is also important to consider data privacy, security, and compliance in any production implementation.
 
-Thank you for using this pipeline, and I hope it was helpful. If you have any suggestions or questions, feel free to reach out to me at contact.kishlayjeet@gmail.com.
+## Future Enhancements
+
+This project provides a solid foundation that can be further enhanced by adding more functionalities such as data cleaning, transformation, and analysis. It can also be integrated with other systems and services, such as data warehousing, machine learning, and visualization tools, to enable more advanced use cases.
+
+## Author
+
+Thank you for using this data pipeline. If you have any questions, suggestions, or feedback, please don't hesitate to contact me at contact.kishlayjeet@gmail.com.

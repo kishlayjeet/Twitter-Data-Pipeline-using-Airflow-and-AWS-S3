@@ -39,29 +39,28 @@ I used a local machine with the below specifications:
 1. Clone the repository
 
 ```bash
- git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-using-Airflow-and-AWS-S3.git
+git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-using-Airflow-and-AWS-S3.git
 
 ```
 
 2. Install the required packages
 
 ```bash
- pip install -r requirements.txt
+pip install -r requirements.txt
 
 ```
 
 3. Create a config.py file in the root directory of the project and add the following variables:
 
 ```python
- AccessKey = "[Your Twitter API key]"
- AccessSecret = "[Your Twitter API secret key]"
- BearerToken = "[Your Twitter API bearer token]"
- ConsumerKey = "[Your Twitter access token]"
- ConsumerSecret = "[Your Twitter access token secret]"
+AccessKey = "[Your Twitter API key]"
+AccessSecret = "[Your Twitter API secret key]"
+BearerToken = "[Your Twitter API bearer token]"
+ConsumerKey = "[Your Twitter access token]"
+ConsumerSecret = "[Your Twitter access token secret]"
 
- KEY = "[Your AWS access key]"
- SECRET = "[Your AWS secret key]"
-
+KEY = "[Your AWS access key]"
+SECRET = "[Your AWS secret key]"
 ```
 
 4. Update the airflow.cfg file to point to your config.py file and set the appropriate S3 bucket name.
@@ -71,7 +70,7 @@ I used a local machine with the below specifications:
 1. Start the Airflow webserver
 
 ```bash
- airflow standalone
+airflow standalone
 ```
 
 ![Airflow Server](https://imgur.com/RM9bEZb.png)

@@ -16,11 +16,11 @@ The Twitter API is used to collect data from Twitter. The data collected from th
 
 ### Hardware Used
 
-I used a local machine with the below specifications:
+I used a local machine with the following specifications:
 
 ```bash
-  UbuntuOs
-  4 vCore, 4 GiB Memory
+  Ubuntu OS
+  4 vCores, 4 GiB Memory
   Storage: 32 GiB
 ```
 
@@ -28,7 +28,7 @@ I used a local machine with the below specifications:
 
 - A Twitter developer account and API key
 - An AWS account and S3 bucket set up
-- Python3
+- Python 3
 - Airflow
 - tweepy
 - pandas
@@ -40,17 +40,15 @@ I used a local machine with the below specifications:
 
 ```bash
 git clone https://github.com/kishlayjeet/Twitter-Data-Pipeline-using-Airflow-and-AWS-S3.git
-
 ```
 
 2. Install the required packages
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
-3. Create a config.py file in the root directory of the project and add the following variables:
+3. Create a `config.py` file in the root directory of the project and add the following variables:
 
 ```python
 AccessKey = "[Your Twitter API key]"
@@ -63,7 +61,7 @@ KEY = "[Your AWS access key]"
 SECRET = "[Your AWS secret key]"
 ```
 
-4. Update the airflow.cfg file to point to your config.py file and set the appropriate S3 bucket name.
+4. Update the `airflow.cfg` file to point to your `config.py` file and set the appropriate S3 bucket name.
 
 ## Usage
 
@@ -75,13 +73,13 @@ airflow standalone
 
 ![Airflow Server](https://imgur.com/RM9bEZb.png)
 
-2. Login to Airflow through your browser on the default `8080` port.
+2. Access Airflow through your browser using the default `8080` port.
 
-3. In the Airflow UI, turn on the `twitter_data_pipeline` DAG.
+3. In the Airflow UI, enable the `twitter_data_pipeline` DAG.
 
 4. The pipeline will run on the schedule defined in the DAG and load the data into the specified S3 bucket in CSV format.
 
-Example:-
+Example output:
 
 | user     | username  | text                                            | like_count | reply_count | retweet_count | created_at                |
 | :------- | :-------- | :---------------------------------------------- | :--------- | :---------- | :------------ | :------------------------ |
@@ -91,24 +89,24 @@ Example:-
 | elonmusk | Elon Musk | I’m reviewing it next week for possible release | 2134       | 166         | 165           | 2023-01-21 03:13:31+00:00 |
 | elonmusk | Elon Musk | The debt trend is 🤯🤯                          | 2255       | 314         | 193           | 2023-01-21 00:27:49+00:00 |
 
-## Note
+## Notes
 
 - The pipeline is currently set to extract data from a specific Twitter handle. You can update the `run_twitter_etl` function in `dags/twitter_etl.py` to extract data from other sources.
 - The pipeline is currently set to load the data into a specific S3 bucket. You can update the `bucket_name` variable in `dags/twitter_etl.py` to load the data into other S3 buckets or in a different format.
-- The pipeline is currently set to run every seven days. You can update the `schedule_interval` in the DAG to run more or less frequently.
+- The pipeline is currently scheduled to run every seven days. You can update the `schedule_interval` in the DAG to run more or less frequently.
 
-## Extra
+## Extras
 
-- You can also check the output dataframe for a specific task by using xcom_pull from the task_instance.
+- You can also check the output dataframe for a specific task by using `xcom_pull` from the `task_instance`.
 - You can also check the S3 CSV file using the S3 bucket URL.
-- You can also set up the airflow on other cloud platforms like GCP and Azure.
+- You can also set up Airflow on other cloud platforms like GCP and Azure.
 
-## Error handling and troubleshooting
+## Error Handling and Troubleshooting
 
 - Airflow provides a UI for monitoring the status of tasks and DAG runs. In case of task failure, the UI displays the error message and the traceback, which can be used to troubleshoot the issue.
 - Airflow also provides the option to retry failed tasks a certain number of times before marking them as failures. This can be configured in the DAG definition.
-- In the `run_twitter_etl` function in `dags/twitter_etl.py`, you can also includes try-except blocks to catch and handle any errors that may occur while extracting data from the Twitter API.
-- In case of issues with the S3 bucket, such as access denied or invalid credentials, check if the `config.py` file contains the correct AWS access key and secret key and that the S3 bucket name is correctly configured in the `twitter_etl.py` file.
+- In the `run_twitter_etl` function in `dags/twitter_etl.py`, you can include try-except blocks to catch and handle any errors that may occur while extracting data from the Twitter API.
+- In case of issues with the S3 bucket, such as access denied or invalid credentials, check if the `config.py` file contains the correct AWS access key and secret key, and that the S3 bucket name is correctly configured in the `twitter_etl.py` file.
 - Logs for the pipeline can also be found in the `logs/` directory. These logs can be useful in troubleshooting issues with the pipeline.
 
 ## Conclusion

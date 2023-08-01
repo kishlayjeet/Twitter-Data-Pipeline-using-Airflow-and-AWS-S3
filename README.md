@@ -123,4 +123,4 @@ This project provides a solid foundation that can be further enhanced by adding 
 
 ## Author
 
-Thank you for using this data pipeline. If you have any questions, suggestions, or feedback, please don't hesitate to contact me at contact.kishlayjeet@gmail.com.
+Thank you for using this data pipeline. If you have any questions, suggestions, or feedback, please don't hesitate to contact me at contact.kishlayjeet@gmail.com

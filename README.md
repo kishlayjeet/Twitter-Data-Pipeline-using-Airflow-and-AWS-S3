@@ -2,6 +2,8 @@
 
 This project is designed to extract data from Twitter using the Twitter API and load it into an AWS S3 bucket in CSV format. The pipeline is managed and orchestrated using Airflow.
 
+Check out my advanced version of **Twitter Data Pipeline** by [click here](https://github.com/kishlayjeet/Zomato-Twitter-Sentiment-Analysis-Data-Pipeline).
+
 ## Architecture
 
 ![Architecture Image](https://imgur.com/mAjDOxl.png)
